@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>NHTStore </title>
+<link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="header">
+    <!-- Left -->
+    <div class="header-left">
+      <button class="menu-btn"><i class="fas fa-bars"></i></button>
+      <div class="logo">
+        <img src="../Hethonglaptop/images/NHTStore.jpg" alt="Logo">
+        <span>NHTStore</span>
+      </div>
+    </div>
+
+    <!-- Search -->
+   <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+  <button id="searchBtn"><i class="fas fa-search"></i></button>
+</div>
+
+
+    <!-- Right -->
+    <div class="header-right">
+      <div><i class="fas fa-phone"></i> Gọi mua hàng <b>0888.090.888</b></div>
+      <div><i class="fas fa-map-marker-alt"></i> Cửa hàng gần bạn</div>
+      <div><i class="fas fa-truck"></i> Tra cứu đơn hàng</div>
+     
+        <!-- Nút đăng nhập -->
+  <a href="login.html" class="icon-btn">
+    <i class="fas fa-user"></i>
+  </a>
+
+  <!-- Nút giỏ hàng -->
+  <a href="giohang.html" class="icon-btn">
+    <i class="fas fa-shopping-bag"></i>
+  </a>
+    </div>
+  </div>
+  <div class="sidebar">
+
+<ul>
+  <li class="has-submenu">
+    <i class="fas fa-laptop"></i> Laptop, PC, Màn hình
+    <ul class="submenu">
+      <li>Laptop Gaming</li>
+      <li>Laptop Văn phòng</li>
+      <li>PC - Máy tính để bàn</li>
+      <li>Màn hình máy tính</li>
+    </ul>
+  </li>
+  <li><i class="fas fa-charging-station"></i> Phụ kiện</li>
+  <li><i class="fas fa-sync-alt"></i> Hàng cũ</li>
+  <li><i class="fas fa-tags"></i> Khuyến mãi</li>
+  <li><i class="fas fa-newspaper"></i> Tin tức</li>
+  <li><i class="fas fa-recycle"></i> Chính sách thu cũ đổi mới</li>
+</ul>
+
+</div>
+<!-- Banner chính + phụ -->
+<div class="banner-section">
+  <!-- Banner chính -->
+  <div class="main-banner">
+    <img src="../Hethonglaptop/images/Untitled-6.webp" alt="">
+  </div>
+
+  <!-- Banner phụ -->
+  <div class="side-banners">
+    <div class="side-banner">
+      <img src="../Hethonglaptop/images/ltRB.webp" alt="Laptop giá siêu tốt">
+    </div>
+    <div class="side-banner">
+      <img src="../Hethonglaptop/images/ltRB.webp" alt="Laptop giá siêu tốt">
+    </div>
+ 
+  </div>
+</div>
+<section class="featured-products">
+  <h2>SẢN PHẨM NỔI BẬT</h2>
+
+  <!-- Thanh filter hãng -->
+  <div class="brand-filter">
+    <button href="#">Dell</button>
+    <button href="#">HP</button>
+    <button href="#">Acer</button>
+    <button href="#">Asus</button>
+    <button href="#">LG</button>
+  </div>
+
+  <div id="product-list">
+    
+  </div>
+
+  <!-- Danh sách sản phẩm -->
+  <div class="product-grid">
+    <a href="chitiet.html?id=1" class="product-card">
+  <img src="../Hethonglaptop/images/Acer-Predator-Helios-300-PH315-52-Gaming-Laptop-1-300x300.jpg" alt="Acer Predator Helios 300 PH315-52-78HH Gaming Laptop">
+  <h3>Acer Predator Helios 300 PH315-52-78HH Gaming Laptop | Chính hãng VN/A</h3>
+  <p class="price">33,990,000 đ</p>
+  <div class="rating">
+    ⭐⭐⭐⭐⭐ <span>(2 Đánh giá)</span>
+  </div>
+</a>
+
+  <a href="chitiet.html?id=2" class="product-card">
+  <img src="../Hethonglaptop/images/Acer-Swift-7-SF714-52T-Laptop-1-510x510-1-300x300.jpg" 
+       alt="Acer Swift 7 SF714-52T-7134 Laptop – Black">
+  <h3>Acer Swift 7 SF714-52T-7134 Laptop – Black | Chính hãng VN/A</h3>
+  <p class="price">20,900,000 đ</p>
+  <div class="rating">
+    ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+  </div>
+</a>
+
+
+    <a href="chitiet.html?id=3" class="product-card">
+  <img src="../Hethonglaptop/images/LG-Gram-17Z90N-V.AH75A5-Laptop-v2-510x510-1-300x300.jpg" alt="LG Gram 14ZD90N">
+  <h3>LG Gram 14ZD90N-V.AX55A5 Laptop – Silver | Chính hãng VN/A</h3>
+  <p class="price">24,900,000 đ</p>
+  <div class="rating">⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span></div>
+</a>
+
+
+    <div class="product-card">
+      <a href="chitiet.html?id=4" class="product-card"></a>
+      <img src="../Hethonglaptop/images/Acer-Predator-Helios-300-PH315-52-Gaming-Laptop-1-300x300.jpg" alt="Acer Predator Helios 300 PH315-52-78HH Gaming Laptop">
+      <h3>Acer Predator Helios 300 PH315-52-78HH Gaming Laptop | Chính hãng VN/A</h3>
+      <p class="price">31,990,000 đ</p>
+      <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>(5 Đánh giá)</span>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="chitiet.html?id=5" class="product-card"></a>
+      <img src="../Hethonglaptop/images/ASUS-ROG-Strix-SCAR-III-Laptop-1-510x510-1-300x300.jpg" alt="ASUS ROG Zephyrus M GU502GU-AZ090T Gaming">
+      <h3> ASUS ROG Zephyrus M GU502GU-AZ090T Gaming | Chính hãng VN/A</h3>
+      <p class="price">31,900,000 đ</p>
+      <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+    </div>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide product-card">
+        <a href="chitiet.html?id=6" class="product-card"></a>
+        <span class="discount">-4%</span>
+        <img src="../Hethonglaptop/images/48813-17.webp" alt="LG Gram">
+        <h3>G Gram 17Z90N-V.AH75A5 Laptop Silver</h3>
+        <p class="old-price">39.600.000 ₫</p>
+        <p class="price">38.000.000 ₫</p>
+        <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+      </div>
+
+
+      <div class="swiper-slide product-card">
+        <a href="chitiet.html?id=7" class="product-card"></a>
+        <span class="discount">-3%</span>
+        <img src="../Hethonglaptop/images/250_59790_laptop_acer_aspire_a515_58m_79r7_nx_kq8sv_007.jpg" alt="Acer Predator">
+        <h3>Acer Predator Helios 300 PH315-52-78HH Gaming Laptop</h3>
+        <p class="old-price">35.600.000 ₫</p>
+        <p class="price">34.500.000 ₫</p>
+        <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+      </div>
+
+
+      <div class="swiper-slide product-card">
+        <a href="chitiet.html?id=8" class="product-card"></a>
+        <span class="discount">-18%</span>
+        <img src="../Hethonglaptop/images/tải xuống.jpg" alt="Asus ROG">
+        <h3>Tai nghe Asus ROG Cetra Core</h3>
+        <p class="old-price">1.200.000 ₫</p>
+        <p class="price">990.000 ₫</p>
+        <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+      </div>
+
+
+      <div class="swiper-slide product-card">
+        <a href="chitiet.html?id=9" class="product-card"></a>
+        <img src="../Hethonglaptop/images/shopping.webp" alt="Case Golden Field">
+        <h3>Thùng máy/ Case Golden Field P31b (2 Fan 20cm ARGB)</h3>
+        <p class="price">990.000 ₫</p>
+        <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+      </div>
+
+
+      <div class="swiper-slide product-card">
+        <a href="chitiet.html?id=10" class="product-card"></a>
+        <span class="discount">-4%</span>
+        <img src="../Hethonglaptop/images/tải xuống (1).jpg" alt="Acer Swift 7">
+        <h3>Acer Swift 7 SF714-52T-7134 Laptop – Black</h3>
+        <p class="old-price">49.600.000 ₫</p>
+        <p class="price">48.000.000 ₫</p>
+        <div class="rating">
+        ⭐⭐⭐⭐☆ <span>(1 Đánh giá)</span>
+      </div>
+      </div>
+    </div>
+
+   <section class="accessories">
+  <h2>PHỤ KIỆN</h2>
+  <div class="accessories-grid">
+    <div class="item red"><img src="icon/cate-966.svg" alt=""><span>Độc quyền</span></div>
+    <div class="item dark-red"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-750.svg" alt=""><span>Ổ cứng</span></div>
+    <div class="item purple"><img src="icon/cate-44.svg" alt=""><span>Dán màn hình</span></div>
+    <div class="item white"><img src="icon/cate-966.svg" alt=""><span>Appcari</span></div>
+    <div class="item gray"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-669.svg" alt=""><span>Tay cầm chơi game</span></div>
+    <div class="item navy"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-114.svg" alt=""><span>Cap sạc</span></div>
+    <div class="item green"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-681.svg" alt=""><span>Thiết bị cũ</span></div>
+    <div class="item yellow"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-663.svg" alt=""><span>Chuột gamming</span></div>
+    <div class="item brown"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-676.svg" alt=""><span>Cục wifi</span></div>
+  </div>
+</section>
+<footer class="footer">
+  <!-- Thanh đăng ký -->
+  <div class="newsletter">
+    <div class="left">
+      <i class="fa fa-paper-plane"></i> ĐĂNG KÝ NHẬN THÔNG TIN
+    </div>
+    <div class="center">
+      <input type="email" placeholder="Email của bạn">
+      <button>ĐĂNG KÝ</button>
+    </div>
+    <div class="right">
+      <i class="fa fa-phone"></i> Tư vấn miễn phí <br><strong>0383167565</strong>
+    </div>
+  </div>
+
+  <!-- Nội dung chính -->
+  <div class="footer-main">
+    <div class="col">
+      <h3>CÔNG TY TNHH NHTStore VIỆT NAM</h3>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> Địa chỉ: khu đấu giá tái định Kiến Hưng, Hà Đông, Hà Nội</li>
+        <li><i class="fa fa-phone"></i> Hotline/Zalo: 0383167565</li>
+        <li><i class="fa fa-envelope"></i> Email: hieudinhvan464@gmail.com</li>
+      </ul>
+      <div class="socials">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-tiktok"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>VỀ ZENTECH</h3>
+      <ul>
+        <li>› Giới thiệu công ty</li>
+        <li>› Liên hệ, góp ý</li>
+        <li>› Chứng nhận phân phối</li>
+        <li>› Tin tức</li>
+        <li>› Tin khuyến mại</li>
+        <li>› Tin công nghệ</li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h3>CHÍNH SÁCH - HỖ TRỢ</h3>
+      <ul>
+        <li>› Điều khoản sử dụng</li>
+        <li>› Hướng dẫn mua hàng</li>
+        <li>› Chính sách thanh toán</li>
+        <li>› Chính sách bảo mật</li>
+        <li>› Chính sách giao hàng</li>
+        <li>› Chính sách đổi trả</li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h3>FAN FACEBOOK</h3>
+      <div class="fanpage">
+        <!-- Nhúng Fanpage -->
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Meta&tabs&width=300&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="300" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById("searchBtn").addEventListener("click", searchProduct);
+
+  // Khi nhấn Enter cũng tìm kiếm
+  document.getElementById("searchInput").addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+      searchProduct();
+    }
+  });
+
+  function searchProduct(){
+    let keyword = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.querySelectorAll(".product-card");
+    let found = false;
+
+    products.forEach(p => {
+      let name = p.querySelector("h3").textContent.toLowerCase();
+      if(name.includes(keyword)){
+        p.style.display = "block";
+        found = true;
+      } else {
+        p.style.display = "none";
+      }
+    });
+
+    // Nếu không tìm thấy sản phẩm nào
+    let msg = document.getElementById("not-found");
+    if(!found){
+      if(!msg){
+        msg = document.createElement("p");
+        msg.id = "not-found";
+        msg.textContent = "Không tìm thấy sản phẩm nào.";
+        msg.style.color = "red";
+        msg.style.marginTop = "20px";
+        document.querySelector(".product-grid").appendChild(msg);
+      }
+    } else {
+      if(msg) msg.remove();
+    }
+  }
+</script>
+
+</body>
+</html>

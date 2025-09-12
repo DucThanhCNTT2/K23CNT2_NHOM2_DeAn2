@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Cột trái -->
+  <div class="product-left">
+    <div class="main-image">
+      <img id="img" src="" alt="">
+      <h3 id="shortName"></h3>
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+
+  <!-- Cột giữa -->
+  <div class="product-center">
+    <nav class="breadcrumb">TRANG CHỦ / SẢN PHẨM</nav>
+    <h1 id="fullName"></h1>
+    <div class="rating">
+      <span class="stars">★★★★★</span> <a href="#">(Đánh giá của khách hàng)</a>
+    </div>
+    <p class="old-price" id="oldPrice"></p>
+    <p class="new-price" id="newPrice"></p>
+
+    <div class="options" id="options"></div>
+    <ul class="specs" id="specs"></ul>
+
+   <div class="buttons">
+  <button class="btn cart"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+  <button class="btn buy"><i class="fas fa-bolt"></i> Thanh toán ngay</button>
+  <a href="index.html" class="btn back"><i class="fas fa-arrow-left"></i> Quay lại Trang chủ</a>
+</div>
+    <div class="reviews">
+  <h2>Đánh giá của khách hàng</h2>
+  <div id="review-list"></div>
+
+  <h3>Viết đánh giá của bạn</h3>
+  <form id="review-form">
+    <input type="text" id="review-name" placeholder="Tên của bạn" required>
+    <select id="review-rating" required>
+      <option value="">Chọn số sao</option>
+      <option value="5">⭐⭐⭐⭐⭐ - Rất tốt</option>
+      <option value="4">⭐⭐⭐⭐ - Tốt</option>
+      <option value="3">⭐⭐⭐ - Bình thường</option>
+      <option value="2">⭐⭐ - Kém</option>
+      <option value="1">⭐ - Rất tệ</option>
+    </select>
+    <textarea id="review-comment" placeholder="Nhận xét của bạn..." required></textarea>
+    <button type="submit" class="btn-review">Gửi đánh giá</button>
+  </form>
+</div>
+  </div>
+
+  <!-- Cột phải -->
+  <div class="product-right">
+    <h3>Chính sách bán hàng</h3>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Cam kết <b>chính hãng</b> 100%</li>
+      <li><i class="fas fa-truck"></i> Miễn phí giao hàng từ 800K</li>
+      <li><i class="fas fa-cogs"></i> Sửa chữa đồng giá 150.000₫</li>
+      <li><i class="fas fa-shield-alt"></i> Bảo hành tại nhà</li>
+    </ul>
+    <h3>Hỗ trợ trực tuyến</h3>
+    <ul class="support">
+      <li><i class="fas fa-phone"></i> Hà Nội: <span class="hotline">0934.666.xxx</span></li>
+      <li><i class="fas fa-phone"></i> HCM: <span class="hotline">0938.086.xxx</span></li>
+      <li><i class="fas fa-headset"></i> Kỹ thuật: <span class="hotline">0903.448.xxx</span></li>
+      <li><i class="fas fa-envelope"></i> Email: admin@gamil.com</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const products = {
+    1: { name: "Acer Predator Helios 300 PH315-52-78HH Gaming Laptop", shortName: "Acer Predator Helios 300",
+         img: "images/Acer-Predator-Helios-300-PH315-52-Gaming-Laptop-1-300x300.jpg",
+         oldPrice: "35.600.000 ₫", newPrice: "33.990.000 ₫",
+         options: [{spec:"Core i5 / Ram 8GB / SSD 128GB", price:"33.990.000 ₫"},
+                   {spec:"Core i7 / Ram 16GB / SSD 256GB", price:"36.900.000 ₫"}],
+         specs: ["CPU: Intel Core i5","RAM: 8GB DDR3","SSD: 128GB + HDD 1TB","Card: GTX 1650 4GB","Màn hình: 15.6\" FHD"] },
+    2: { name: "Acer Swift 7 SF714-52T-7134 Laptop – Black", shortName: "Acer Swift 7",
+         img: "images/Acer-Swift-7-SF714-52T-Laptop-1-510x510-1-300x300.jpg",
+         oldPrice: "22.900.000 ₫", newPrice: "20.900.000 ₫",
+         options: [{spec:"Core i7 / Ram 8GB / SSD 512GB", price:"20.900.000 ₫"}],
+         specs: ["CPU: Intel Core i7-8500Y","RAM: 8GB LPDDR3","SSD: 512GB","Màn hình: 14\" FHD cảm ứng","Trọng lượng: 890g"] },
+    3: { name: "LG Gram 14ZD90N-V.AX55A5 Laptop – Silver", shortName: "LG Gram 14ZD90N",
+         img: "images/LG-Gram-17Z90N-V.AH75A5-Laptop-v2-510x510-1-300x300.jpg",
+         oldPrice: "26.900.000 ₫", newPrice: "24.900.000 ₫",
+         options: [{spec:"Core i5 / Ram 8GB / SSD 256GB", price:"24.900.000 ₫"}],
+         specs: ["CPU: Intel Core i5-1035G7","RAM: 8GB LPDDR4X","SSD: 256GB","Màn hình: 14\" FHD IPS","Trọng lượng: 999g"] },
+    4: { name: "Acer Predator Helios 300 PH315-52-78HH Gaming Laptop", shortName: "Acer Predator Helios 300 (bản khác)",
+         img: "images/acer-predator2.jpg", thumbs: ["images/acer1.jpg"],
+         oldPrice: "33.900.000 ₫", newPrice: "31.990.000 ₫",
+         options: [{spec:"Core i7 / Ram 16GB / SSD 512GB", price:"31.990.000 ₫"}],
+         specs: ["CPU: Intel Core i7","RAM: 16GB DDR4","SSD: 512GB","Card: GTX 1660Ti","Màn hình: 15.6\" 144Hz"] },
+    5: { name: "ASUS ROG Zephyrus M GU502GU-AZ090T Gaming", shortName: "ASUS ROG Zephyrus M",
+         img: "images/asus-rog.jpg", thumbs: ["images/asus1.jpg","images/asus2.jpg"],
+         oldPrice: "34.500.000 ₫", newPrice: "31.900.000 ₫",
+         options: [{spec:"Core i7 / Ram 16GB / SSD 512GB", price:"31.900.000 ₫"}],
+         specs: ["CPU: Intel Core i7-9750H","RAM: 16GB DDR4","SSD: 512GB","Card: GTX 1660Ti","Màn hình: 15.6\" 144Hz"] },
+    6: { name: "LG Gram 17Z90N-V.AH75A5 Laptop Silver", shortName: "LG Gram 17Z90N",
+         img: "images/lg-gram17.jpg", thumbs: ["images/lg17-1.jpg"],
+         oldPrice: "39.600.000 ₫", newPrice: "38.000.000 ₫",
+         options: [{spec:"Core i7 / Ram 16GB / SSD 512GB", price:"38.000.000 ₫"}],
+         specs: ["CPU: Intel Core i7-1065G7","RAM: 16GB LPDDR4X","SSD: 512GB","Màn hình: 17\" WQXGA","Trọng lượng: 1.35kg"] },
+    7: { name: "Acer Predator Helios 300 PH315-52-78HH Gaming Laptop", shortName: "Acer Predator Helios 300 (giảm giá)",
+         img: "images/acer-predator3.jpg", thumbs: ["images/acer1.jpg"],
+         oldPrice: "35.600.000 ₫", newPrice: "34.500.000 ₫",
+         options: [{spec:"Core i7 / Ram 16GB / SSD 512GB", price:"34.500.000 ₫"}],
+         specs: ["CPU: Intel Core i7","RAM: 16GB DDR4","SSD: 512GB","Card: RTX 2060","Màn hình: 15.6\" 144Hz"] },
+    8: { name: "Tai nghe Asus ROG Cetra Core", shortName: "Asus ROG Cetra Core",
+         img: "images/asus-rog-cetra.jpg", thumbs: ["images/cetra1.jpg"],
+         oldPrice: "1.200.000 ₫", newPrice: "990.000 ₫",
+         options: [{spec:"Gaming Headset", price:"990.000 ₫"}],
+         specs: ["Loại: In-ear Gaming","Tương thích: PC / Mobile","Micro: Có","Jack: 3.5mm"] },
+    9: { name: "Case Golden Field P31b (2 Fan 20cm ARGB)", shortName: "Case Golden Field P31b",
+         img: "images/case-goldenfield.jpg", thumbs: ["images/case1.jpg"],
+         oldPrice: "", newPrice: "990.000 ₫",
+         options: [{spec:"Mid Tower, 2 Fan ARGB", price:"990.000 ₫"}],
+         specs: ["Kích thước: Mid Tower","Hỗ trợ: ATX/Micro-ATX","Fan: 2x200mm ARGB","Kính cường lực hông"] },
+    10:{ name: "Acer Swift 7 SF714-52T-7134 Laptop – Black", shortName: "Acer Swift 7 (bản cao cấp)",
+         img: "images/acer-swift7-2.jpg", thumbs: ["images/swift7-1.jpg"],
+         oldPrice: "49.600.000 ₫", newPrice: "48.000.000 ₫",
+         options: [{spec:"Core i7 / Ram 16GB / SSD 1TB", price:"48.000.000 ₫"}],
+         specs: ["CPU: Intel Core i7","RAM: 16GB LPDDR3","SSD: 1TB","Màn hình: 14\" 4K UHD cảm ứng","Trọng lượng: 890g"] }
+  };
+  
+
+  const id = new URLSearchParams(window.location.search).get("id");
+  const p = products[id];
+
+  if(p){
+    document.getElementById("img").src = p.img;
+    document.getElementById("shortName").textContent = p.shortName;
+    document.getElementById("fullName").textContent = p.name;
+    document.getElementById("oldPrice").textContent = p.oldPrice;
+    document.getElementById("newPrice").textContent = p.newPrice;
+
+    // thumbs
+    const thumbsEl = document.getElementById("thumbs");
+    p.thumbs.forEach(img => {
+      const im = document.createElement("img");
+      im.src = img;
+      thumbsEl.appendChild(im);
+    });
+
+    // options
+    const optEl = document.getElementById("options");
+    p.options.forEach((o,i) => {
+      const div = document.createElement("div");
+      div.className = "option" + (i==0?" selected":"");
+      div.innerHTML = `<b>${o.spec}</b><p><span>${o.price}</span></p>`;
+      optEl.appendChild(div);
+    });
+
+    // specs
+    const specsEl = document.getElementById("specs");
+    p.specs.forEach(s => {
+      const li = document.createElement("li");
+      li.textContent = s;
+      specsEl.appendChild(li);
+    });
+  }
+</script>
+<script>
+  // Lấy giỏ hàng hiện tại từ localStorage (nếu chưa có thì tạo mới)
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Lấy thông tin sản phẩm từ trang chi tiết
+  const product = {
+    id: new URLSearchParams(window.location.search).get("id"),
+    name: document.getElementById("fullName").textContent,
+    price: parseInt(document.getElementById("newPrice").textContent.replace(/\D/g,'')), // lấy số từ giá
+    img: document.getElementById("img").src,
+    qty: 1
+  };
+
+  // Nút "Thêm vào giỏ"
+  document.querySelector(".btn.cart").addEventListener("click", function(){
+    addToCart(product);
+    alert("Đã thêm vào giỏ hàng!");
+    window.location.href = "giohang.html";
+  });
+
+  // Nút "Thanh toán ngay"
+  document.querySelector(".btn.buy").addEventListener("click", function(){
+    addToCart(product);
+    window.location.href = "giohang.html"; // sau này có thể redirect sang thanh toán
+  });
+  
+
+  // Hàm thêm sản phẩm vào giỏ
+  function addToCart(p){
+    // kiểm tra sản phẩm đã có trong giỏ chưa
+    let found = cart.find(item => item.id === p.id);
+    if(found){
+      found.qty += 1; // nếu có rồi thì tăng số lượng
+    } else {
+      cart.push(p);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+</script>
+<script>
+  const reviewList = document.getElementById("review-list");
+  const reviewForm = document.getElementById("review-form");
+  const idReview = new URLSearchParams(window.location.search).get("id");
+
+  let reviews = JSON.parse(localStorage.getItem("reviews_" + idReview)) || [];
+
+  function renderReviews() {
+    reviewList.innerHTML = "";
+    if (reviews.length === 0) {
+      reviewList.innerHTML = "<p>Chưa có đánh giá nào cho sản phẩm này.</p>";
+    } else {
+      reviews.forEach(r => {
+        let div = document.createElement("div");
+        div.className = "review-item";
+        div.innerHTML = `
+          <span class="review-name">${r.name}</span>
+          <span class="review-rating">${"⭐".repeat(r.rating)}</span>
+          <div class="review-comment">${r.comment}</div>
+        `;
+        reviewList.appendChild(div);
+      });
+    }
+  }
+
+  reviewForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = document.getElementById("review-name").value;
+    const rating = parseInt(document.getElementById("review-rating").value);
+    const comment = document.getElementById("review-comment").value;
+
+    reviews.push({name, rating, comment});
+    localStorage.setItem("reviews_" + idReview, JSON.stringify(reviews));
+
+    reviewForm.reset();
+    renderReviews();
+  });
+
+  renderReviews();
+</script>
+
+</body>
+</html>

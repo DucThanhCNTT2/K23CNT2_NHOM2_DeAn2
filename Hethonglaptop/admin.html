@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang quản trị Admin</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="admin-container">
+  <!-- Thanh bên -->
+  <aside class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><a href="#products"><i class="fas fa-laptop"></i> Quản lý sản phẩm</a></li>
+      <li><a href="#orders"><i class="fas fa-shopping-cart"></i> Quản lý đơn hàng</a></li>
+      <li><a href="#users"><i class="fas fa-users"></i> Người dùng</a></li>
+    </ul>
+  </aside>
+
+  <!-- Nội dung chính -->
+  <main class="content">
+    <h1>Bảng điều khiển</h1>
+
+    <!-- Quản lý sản phẩm -->
+    <section id="products">
+      <h2>Quản lý sản phẩm</h2>
+      <button class="btn-add"><i class="fas fa-plus"></i> Thêm sản phẩm</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="product-list">
+          <tr>
+            <td><img src="images/acer-predator.jpg" class="thumb"></td>
+            <td>Acer Predator Helios 300</td>
+            <td>33.990.000 đ</td>
+            <td>12</td>
+            <td>
+              <button class="btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Quản lý đơn hàng -->
+    <section id="orders">
+      <h2>Quản lý đơn hàng</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mã đơn</th>
+            <th>Khách hàng</th>
+            <th>Tổng tiền</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="order-list">
+          <tr>
+            <td>#DH001</td>
+            <td>Nguyễn Văn A</td>
+            <td>33.990.000 đ</td>
+            <td><span class="status pending">Chờ xử lý</span></td>
+            <td>
+              <button class="btn-view"><i class="fas fa-eye"></i></button>
+              <button class="btn-done"><i class="fas fa-check"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Quản lý người dùng -->
+    <section id="users">
+      <h2>Quản lý người dùng</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="user-list">
+          <tr>
+            <td>Admin</td>
+            <td>admin@gmail.com</td>
+            <td>Quản trị</td>
+            <td>
+              <button class="btn-edit"><i class="fas fa-edit"></i></button>
+              <button class="btn-delete"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanh toán</title>
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="checkout-container">
+  <h1>Thanh toán</h1>
+
+  <!-- Form thông tin khách hàng -->
+  <div class="customer-info">
+    <h2>Thông tin khách hàng</h2>
+    <form id="checkout-form">
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Họ và tên</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone"><i class="fas fa-phone"></i> Số điện thoại</label>
+        <input type="text" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address"><i class="fas fa-map-marker-alt"></i> Địa chỉ</label>
+        <textarea id="address" required></textarea>
+      </div>
+    </form>
+  </div>
+
+  <!-- Danh sách sản phẩm -->
+  <div class="order-summary">
+    <h2>Đơn hàng của bạn</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tổng</th>
+        </tr>
+      </thead>
+      <tbody id="order-items">
+        <!-- JS render sản phẩm -->
+      </tbody>
+    </table>
+    <p class="total"><b>Tổng cộng: </b><span id="order-total">0 đ</span></p>
+    <button class="btn-confirm" onclick="confirmOrder()">Xác nhận đặt hàng</button>
+  </div>
+</div>
+
+<script>
+  // Lấy giỏ hàng từ localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const orderItems = document.getElementById("order-items");
+  const orderTotal = document.getElementById("order-total");
+
+  function renderOrder(){
+    orderItems.innerHTML="";
+    let total = 0;
+    cart.forEach(item=>{
+      let tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.price.toLocaleString()} đ</td>
+        <td>${item.qty}</td>
+        <td>${(item.price * item.qty).toLocaleString()} đ</td>
+      `;
+      orderItems.appendChild(tr);
+      total += item.price * item.qty;
+    });
+    orderTotal.textContent = total.toLocaleString()+" đ";
+  }
+
+  function confirmOrder(){
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    if(!name || !email || !phone || !address){
+      alert("Vui lòng điền đầy đủ thông tin!");
+      return;
+    }
+
+    alert("Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại cửa hàng.");
+    localStorage.removeItem("cart"); // Xóa giỏ hàng sau khi đặt
+    window.location.href = "index.html"; // Quay về trang chủ
+  }
+
+  renderOrder();
+</script>
+
+</body>
+</html>

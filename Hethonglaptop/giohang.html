@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="css/giohang.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="cart-container">
+  <h1>Giỏ hàng</h1>
+
+  <!-- Nếu giỏ trống -->
+  <div class="cart-empty" id="cart-empty">
+    <p>Chưa có sản phẩm nào trong giỏ hàng.</p>
+    <a href="index.html" class="btn-back">QUAY TRỞ LẠI CỬA HÀNG</a>
+  </div>
+
+  <!-- Nếu có sản phẩm -->
+  <div class="cart-table" id="cart-table" style="display:none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tổng</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- JS sẽ render sản phẩm -->
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+  <p><b>Tổng cộng:</b> <span id="cart-total">0 đ</span></p>
+  <div class="cart-actions">
+    <a href="index.html" class="btn-back-home">⬅ Quay lại Trang chủ</a>
+    <button class="btn-checkout">Thanh toán</button>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+  // Lấy giỏ hàng từ localStorage (nếu chưa có thì là mảng rỗng)
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const cartEmpty = document.getElementById("cart-empty");
+  const cartTable = document.getElementById("cart-table");
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+
+  function renderCart(){
+    if(cart.length === 0){
+      cartEmpty.style.display="block";
+      cartTable.style.display="none";
+      return;
+    }
+    cartEmpty.style.display="none";
+    cartTable.style.display="block";
+
+    cartItems.innerHTML="";
+    let total=0;
+
+    cart.forEach((item,index,img)=>{
+      let row=document.createElement("tr");
+      row.innerHTML=`
+        <td><img src="${item.img}" class="thumb" alt="${item.name}" width="60"></td>
+
+        <td>${item.price.toLocaleString()} đ</td>
+        <td>
+          <input type="number" min="1" value="${item.qty}" data-index="${index}" class="qty-input">
+        </td>
+        <td>${(item.price*item.qty).toLocaleString()} đ</td>
+        <td><button class="btn-remove" data-index="${index}"><i class="fas fa-trash"></i></button></td>
+      `;
+      cartItems.appendChild(row);
+      total += item.price*item.qty;
+    });
+
+    cartTotal.textContent = total.toLocaleString()+" đ";
+    localStorage.setItem("cart", JSON.stringify(cart)); // cập nhật localStorage
+  }
+
+  // Xử lý sự kiện thay đổi số lượng
+  document.addEventListener("change", function(e){
+    if(e.target.classList.contains("qty-input")){
+      let i = e.target.dataset.index;
+      cart[i].qty = parseInt(e.target.value);
+      renderCart();
+    }
+  });
+
+  // Xử lý sự kiện xóa sản phẩm
+  document.addEventListener("click", function(e){
+    if(e.target.closest(".btn-remove")){
+      let i = e.target.closest(".btn-remove").dataset.index;
+      cart.splice(i,1);
+      renderCart();
+    }
+  });
+
+  renderCart();
+</script>
+
+</body>
+</html>
