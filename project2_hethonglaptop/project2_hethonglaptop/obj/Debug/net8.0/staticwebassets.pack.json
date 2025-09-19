@@ -1,0 +1,361 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\project2_hethonglaptop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\project2_hethonglaptop.apyga9yjd4.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\css\\giohang.css",
+      "PackagePath": "staticwebassets\\css\\giohang.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\cate-44.svg",
+      "PackagePath": "staticwebassets\\icon\\cate-44.svg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\cate-663.svg",
+      "PackagePath": "staticwebassets\\icon\\cate-663.svg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\cate-966.svg",
+      "PackagePath": "staticwebassets\\icon\\cate-966.svg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\tải xuống (1).htm",
+      "PackagePath": "staticwebassets\\icon\\tải xuống (1).htm"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\tải xuống (2).htm",
+      "PackagePath": "staticwebassets\\icon\\tải xuống (2).htm"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\icon\\tải xuống.htm",
+      "PackagePath": "staticwebassets\\icon\\tải xuống.htm"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\250_59790_laptop_acer_aspire_a515_58m_79r7_nx_kq8sv_007.jpg",
+      "PackagePath": "staticwebassets\\images\\250_59790_laptop_acer_aspire_a515_58m_79r7_nx_kq8sv_007.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\48813-17.webp",
+      "PackagePath": "staticwebassets\\images\\48813-17.webp"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\ASUS-ROG-Strix-SCAR-III-Laptop-1-510x510-1-300x300.jpg",
+      "PackagePath": "staticwebassets\\images\\ASUS-ROG-Strix-SCAR-III-Laptop-1-510x510-1-300x300.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\Acer-Swift-7-SF714-52T-Laptop-1-510x510-1-300x300.jpg",
+      "PackagePath": "staticwebassets\\images\\Acer-Swift-7-SF714-52T-Laptop-1-510x510-1-300x300.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\LG-Gram-17Z90N-V.AH75A5-Laptop-v2-510x510-1-300x300.jpg",
+      "PackagePath": "staticwebassets\\images\\LG-Gram-17Z90N-V.AH75A5-Laptop-v2-510x510-1-300x300.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\NHTStore.jpg",
+      "PackagePath": "staticwebassets\\images\\NHTStore.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\Untitled-6.webp",
+      "PackagePath": "staticwebassets\\images\\Untitled-6.webp"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\ltRB (1).webp",
+      "PackagePath": "staticwebassets\\images\\ltRB (1).webp"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\ltRB.webp",
+      "PackagePath": "staticwebassets\\images\\ltRB.webp"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\shopping.webp",
+      "PackagePath": "staticwebassets\\images\\shopping.webp"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\tải xuống (1).jpg",
+      "PackagePath": "staticwebassets\\images\\tải xuống (1).jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\tải xuống.jpg",
+      "PackagePath": "staticwebassets\\images\\tải xuống.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\images\\z7003702241205_e609ff8fc8a010c1af533a9bb418aec1.jpg",
+      "PackagePath": "staticwebassets\\images\\z7003702241205_e609ff8fc8a010c1af533a9bb418aec1.jpg"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\K23CNT2_DinhVanHieu_project2\\project2_hethonglaptop\\project2_hethonglaptop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.project2_hethonglaptop.props",
+      "PackagePath": "build\\project2_hethonglaptop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.project2_hethonglaptop.props",
+      "PackagePath": "buildMultiTargeting\\project2_hethonglaptop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.project2_hethonglaptop.props",
+      "PackagePath": "buildTransitive\\project2_hethonglaptop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project2_hethonglaptop.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.project2_hethonglaptop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
