@@ -1,0 +1,172 @@
+﻿@{
+    Layout = "_Layout";
+}
+@{
+    Layout = null;
+    var id = ViewBag.Id; // id từ controller truyền qua
+}
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm (JS Render)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="body">
+
+    <script>
+        // === Render toàn bộ giao diện bằng JS ===
+        document.body.style.margin = "0";
+        document.body.style.fontFamily = "Arial, sans-serif";
+        document.body.style.background = "#f9f9f9";
+
+        // ===== HEADER =====
+        const header = document.createElement("div");
+        header.style.display = "flex";
+        header.style.justifyContent = "space-between";
+        header.style.alignItems = "center";
+        header.style.background = "#b00012";
+        header.style.color = "#fff";
+        header.style.padding = "10px 30px";
+
+        // Left
+        const headerLeft = document.createElement("div");
+        headerLeft.style.display = "flex";
+        headerLeft.style.alignItems = "center";
+        headerLeft.innerHTML = `<button style="background:none;border:none;color:#fff;font-size:18px;cursor:pointer"><i class="fas fa-bars"></i></button>
+        <img src="images/NHTStore.jpg" alt="Logo" style="height:40px;margin-left:10px;margin-right:10px"><span style="font-size:18px;font-weight:bold">NHTStore</span>`;
+        header.appendChild(headerLeft);
+
+        // Search
+        const searchBar = document.createElement("div");
+        searchBar.style.flex = "1";
+        searchBar.style.display = "flex";
+        searchBar.style.justifyContent = "center";
+        searchBar.innerHTML = `<input type="text" placeholder="Tìm kiếm..."
+           style="width:60%;padding:8px 12px;border:none;border-radius:20px 0 0 20px;outline:none">
+           <button style="background:#ff4d4f;border:none;color:#fff;padding:8px 15px;border-radius:0 20px 20px 0;cursor:pointer"><i class="fas fa-search"></i></button>`;
+        header.appendChild(searchBar);
+
+        // Right
+        const headerRight = document.createElement("div");
+        headerRight.style.display = "flex";
+        headerRight.style.alignItems = "center";
+        headerRight.style.gap = "20px";
+        headerRight.innerHTML = `
+          <div><i class="fas fa-phone"></i> 0888.090.888</div>
+          <div><i class="fas fa-map-marker-alt"></i> Cửa hàng</div>
+          <a href="#" style="color:#fff"><i class="fas fa-user"></i></a>
+          <a href="#" style="color:#fff"><i class="fas fa-shopping-bag"></i></a>`;
+        header.appendChild(headerRight);
+
+        document.body.appendChild(header);
+
+        // ===== CONTAINER =====
+        const container = document.createElement("div");
+        container.style.display = "grid";
+        container.style.gridTemplateColumns = "1fr 2fr 1fr";
+        container.style.gap = "30px";
+        container.style.maxWidth = "1300px";
+        container.style.margin = "20px auto";
+        container.style.background = "#fff";
+        container.style.padding = "30px";
+
+        // Left cột
+        const leftCol = document.createElement("div");
+        leftCol.style.textAlign = "center";
+        leftCol.innerHTML = `
+          <img id="mainImg" src="images/acer1.jpg" style="width:100%;max-height:300px;object-fit:contain">
+          <h3 id="shortName">Acer Predator Helios 300</h3>
+          <div id="thumbs"></div>`;
+        container.appendChild(leftCol);
+
+        // Center cột
+        const centerCol = document.createElement("div");
+        centerCol.innerHTML = `
+          <nav style="font-size:14px;color:#888">TRANG CHỦ / SẢN PHẨM</nav>
+          <h1 id="fullName">Laptop Acer Predator Helios 300</h1>
+          <div style="margin:10px 0;color:#fadb14"><span>★★★★★</span> <a href="#">(Đánh giá)</a></div>
+          <p id="oldPrice" style="text-decoration:line-through;color:gray">35.600.000 ₫</p>
+          <p id="newPrice" style="color:#e60023;font-size:20px;font-weight:bold">33.990.000 ₫</p>
+          <div id="options"></div>
+          <ul id="specs"></ul>
+          <div style="margin-top:20px;display:flex;gap:10px">
+             <button class="btnCart" style="flex:1;background:#ff7a45;color:#fff;border:none;padding:12px;border-radius:5px;cursor:pointer"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+             <button class="btnBuy" style="flex:1;background:#52c41a;color:#fff;border:none;padding:12px;border-radius:5px;cursor:pointer"><i class="fas fa-bolt"></i> Thanh toán</button>
+          </div>
+          <a href="#" style="display:block;margin-top:15px;text-align:center;color:#555;text-decoration:none">← Quay lại Trang chủ</a>
+          <div class="reviews" style="margin-top:30px">
+            <h2>Đánh giá khách hàng</h2>
+            <div id="review-list"><p>Chưa có đánh giá</p></div>
+            <h3>Viết đánh giá</h3>
+            <form id="review-form">
+              <input type="text" id="review-name" placeholder="Tên của bạn" required style="width:100%;padding:8px;margin:5px 0">
+              <select id="review-rating" required style="width:100%;padding:8px;margin:5px 0">
+                <option value="">Chọn số sao</option>
+                <option value="5">⭐⭐⭐⭐⭐ - Rất tốt</option>
+                <option value="4">⭐⭐⭐⭐ - Tốt</option>
+                <option value="3">⭐⭐⭐ - Bình thường</option>
+                <option value="2">⭐⭐ - Kém</option>
+                <option value="1">⭐ - Rất tệ</option>
+              </select>
+              <textarea id="review-comment" placeholder="Nhận xét của bạn..." required style="width:100%;padding:8px;margin:5px 0"></textarea>
+              <button type="submit" style="background:#1890ff;color:#fff;border:none;padding:8px 15px;border-radius:5px;cursor:pointer">Gửi</button>
+            </form>
+          </div>
+        `;
+        container.appendChild(centerCol);
+
+        // Right cột
+        const rightCol = document.createElement("div");
+        rightCol.innerHTML = `
+          <h3>Chính sách bán hàng</h3>
+          <ul style="list-style:none;padding:0">
+            <li><i class="fas fa-check-circle" style="color:green"></i> Chính hãng 100%</li>
+            <li><i class="fas fa-truck" style="color:green"></i> Miễn phí ship từ 800K</li>
+            <li><i class="fas fa-cogs" style="color:green"></i> Sửa chữa đồng giá 150K</li>
+            <li><i class="fas fa-shield-alt" style="color:green"></i> Bảo hành tận nơi</li>
+          </ul>
+          <h3>Hỗ trợ</h3>
+          <ul style="list-style:none;padding:0">
+            <li><i class="fas fa-phone"></i> Hà Nội: <b style="color:#e60023">0934.666.xxx</b></li>
+            <li><i class="fas fa-phone"></i> HCM: <b style="color:#e60023">0938.086.xxx</b></li>
+          </ul>
+        `;
+        container.appendChild(rightCol);
+
+        document.body.appendChild(container);
+
+        // ==== DỮ LIỆU MẪU ====
+        const specsEl = document.getElementById("specs");
+        ["CPU: Intel Core i5", "RAM: 8GB DDR4", "SSD: 512GB", "Card: GTX 1650", "Màn hình: 15.6\" FHD"].forEach(s=>{
+          const li=document.createElement("li");
+          li.textContent=s;
+          specsEl.appendChild(li);
+        });
+
+        // ==== SỰ KIỆN ĐÁNH GIÁ ====
+        const reviewForm = document.getElementById("review-form");
+        const reviewList = document.getElementById("review-list");
+        let reviews = [];
+
+        reviewForm.addEventListener("submit", e=>{
+          e.preventDefault();
+          const name=document.getElementById("review-name").value;
+          const rating=document.getElementById("review-rating").value;
+          const comment=document.getElementById("review-comment").value;
+          reviews.push({name,rating,comment});
+          renderReviews();
+          reviewForm.reset();
+        });
+
+        function renderReviews(){
+          reviewList.innerHTML="";
+          reviews.forEach(r=>{
+            const div=document.createElement("div");
+            div.innerHTML=`<b>${r.name}</b> - ${"⭐".repeat(r.rating)}<br><i>${r.comment}</i>`;
+            reviewList.appendChild(div);
+          });
+        }
+    </script>
+
+</body>
+</html>

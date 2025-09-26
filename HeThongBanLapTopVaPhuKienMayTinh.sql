@@ -190,3 +190,25 @@ JOIN NhanVien nv ON hd.MaNV = nv.MaNV
 JOIN SanPham sp ON cthd.MaSP = sp.MaSP;
 
 
+ALTER TABLE SanPham
+ADD Anh NVARCHAR(255);
+
+UPDATE SanPham
+SET Anh = 'images/Acer-Predator-Helios.jpg'
+WHERE MaSP = 'SP01';
+
+UPDATE SanPham
+SET Anh = 'images/Acer-Swift-7.jpg'
+WHERE MaSP = 'SP02';
+
+UPDATE SanPham
+SET Anh = 'images/LG-Gram.jpg'
+WHERE MaSP = 'SP03';
+
+UPDATE SanPham
+SET Anh = 'images/Asus-ROG-Zephyrus.jpg'
+WHERE MaSP = 'SP04';
+
+UPDATE SanPham
+SET Anh = 'images/lenovo-thinkpad.jpg'
+WHERE MaSP = 'SP05';
