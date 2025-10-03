@@ -1,0 +1,291 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    // giả sử bạn có danh sách sản phẩm trong ViewBag hoặc Model
+    var products = new[] {
+        new { Id=1, Name="Acer Predator Helios 300", Img="~/images/Acer-Predator-Helios.jpg", Price="33.990.000 ₫" },
+        new { Id=2, Name="Acer Swift 7", Img="~/images/Acer-Swift-7.jpg", Price="20.900.000 ₫" },
+        new { Id=3, Name="LG Gram 14ZD90N", Img="~/images/LG-Gram.jpg", Price="24.900.000 ₫" },
+        new { Id=4, Name="Acer Predator Helios 300", Img="~/images/acer2.jpg", Price="31.990.000 ₫" },
+        new { Id=5, Name="ASUS ROG Zephyrus M", Img="~/images/asus-rog.jpg", Price="31.900.000 ₫" }
+    };
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NHTStore </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <!-- Left -->
+        <div class="header-left">
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <img src="/images/NHTStore.jpg" alt="Logo">
+                <span>NHTStore</span>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
+        </div>
+
+
+        <!-- Right -->
+        <div class="header-right">
+            <div><i class="fas fa-phone"></i> Gọi ngay <b>0888.090.888</b></div>
+            <div><i class="fas fa-map-marker-alt"></i> Cửa hàng gần bạn</div>
+            <div><i class="fas fa-truck"></i> Tra cứu đơn hàng</div>
+
+	    <!-- Nút đăng nhập/đăng xuất -->
+            @if (Context.Session.GetString("UserName") != null)
+            {
+                <span class="me-2 text-white">Xin chào, @Context.Session.GetString("UserName")</span>
+
+                @* Nếu là Admin thì hiện nút Quản trị *@
+                @if (Context.Session.GetString("Role") == "Admin")
+                {
+                    <a asp-controller="Admin" asp-action="Index" class="btn btn-warning btn-sm me-2">
+                        <i class="fa fa-cogs"></i> Quản trị
+                    </a>
+                }
+
+                <a asp-controller="Accounts" asp-action="Logout" class="text-white text-decoration-none">
+                    <i class="fa fa-sign-out-alt"></i>
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Accounts" asp-action="Login" class="text-white text-decoration-none">
+                    <i class="fas fa-user"></i>
+                </a>
+            }
+            <!-- Nút giỏ hàng -->
+            <div class="d-flex align-items-center text-white me-4">
+                
+                <a asp-controller="Carts" asp-action="Index" class="text-white text-decoration-none">
+					<i class="bi bi-cart4 me-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li class="has-submenu">
+                <i class="fas fa-laptop"></i> Laptop, PC, Màn hình
+                <ul class="submenu">
+                    <li>Laptop Gaming</li>
+                    <li>Laptop Văn phòng</li>
+                    <li>PC - Máy tính để bàn</li>
+                    <li>Màn hình máy tính</li>
+                </ul>
+            </li>
+            <li><i class="fas fa-charging-station"></i> Phụ kiện</li>
+            <li><i class="fas fa-sync-alt"></i> Hàng cũ</li>
+            <li><i class="fas fa-tags"></i> Khuyến mãi</li>
+            <li><i class="fas fa-newspaper"></i> Tin tức</li>
+            <li><i class="fas fa-recycle"></i> Chính sách thu cũ đổi mới</li>
+        </ul>
+    </div>
+
+    <!-- Banner chính + phụ -->
+    <div class="banner-section">
+        <!-- Banner chính -->
+        <div class="main-banner">
+            <img src="/images/banner.webp" alt="">
+        </div>
+
+        <!-- Banner phụ -->
+        <div class="side-banners">
+            <div class="side-banner">
+                <img src="/images/sidebanner1.webp" alt="Laptop giá siêu tốt">
+            </div>
+            <div class="side-banner">
+                <img src="/images/sidebanner2.webp" alt="Laptop giá siêu tốt">
+            </div>
+
+        </div>
+    </div>
+    <section class="featured-products">
+        <h2>SẢN PHẨM NỔI BẬT</h2>
+
+        <!-- Thanh filter hãng -->
+        <div class="brand-filter">
+            <button>Dell</button>
+            <button>HP</button>
+            <button>Acer</button>
+            <button>LG</button>
+            <button>Mac</button>
+        </div>
+
+        @model IEnumerable<Hethonglaptop_prj2.Models.SanPham>
+
+        <div class="product-grid">
+            @foreach (var sp in Model)
+            {
+                <div class="product-card">
+                    <a asp-controller="Home" asp-action="ChiTiet" asp-route-id="@sp.MaSp">
+                        <img src="@sp.Anh" alt="@sp.TenSp" />
+                        <h3>@sp.TenSp | Chính hãng VN/A</h3>
+                        <p class="price">@string.Format("{0:N0} đ", sp.Gia)</p>
+                    </a>
+                </div>
+            }
+        </div>
+
+		<section class="accessories">
+            <h2>PHỤ KIỆN</h2>
+            <div class="accessories-grid">
+                <div class="item red"><img src="icon/cate-966.svg" alt=""><span>Độc quyền</span></div>
+                <div class="item dark-red"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-750.svg" alt=""><span>Ổ cứng</span></div>
+                <div class="item purple"><img src="icon/cate-44.svg" alt=""><span>Dán màn hình</span></div>
+                <div class="item white"><img src="icon/cate-966.svg" alt=""><span>Appcari</span></div>
+                <div class="item gray"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-669.svg" alt=""><span>Tay cầm chơi game</span></div>
+                <div class="item navy"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-114.svg" alt=""><span>Cap sạc</span></div>
+                <div class="item green"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-681.svg" alt=""><span>Thiết bị cũ</span></div>
+                <div class="item yellow"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-663.svg" alt=""><span>Chuột gamming</span></div>
+                <div class="item brown"><img src="https://dienthoai.vinastar.info/wp-content/uploads/2021/11/cate-676.svg" alt=""><span>Cục wifi</span></div>
+            </div>
+        </section>
+        <footer class="footer">
+            <!-- Thanh đăng ký -->
+            <div class="newsletter">
+                <div class="left">
+                    <i class="fa fa-paper-plane"></i> ĐĂNG KÝ NHẬN THÔNG TIN
+                </div>
+                <div class="center">
+                    <input type="email" id="emailInput" placeholder="Email của bạn">
+                    <button id="subscribeBtn">ĐĂNG KÝ</button>
+                    <!-- Thông báo -->
+                    <p id="subscribeMsg" style="color:green; margin-top:10px; display:none;"></p>
+                </div>
+                <div class="right">
+                    <i class="fa fa-phone"></i> Tư vấn miễn phí <br><strong>0383167565</strong>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("subscribeBtn").addEventListener("click", function () {
+                    var email = document.getElementById("emailInput").value.trim();
+                    var msg = document.getElementById("subscribeMsg");
+
+                    if (email === "") {
+                        msg.style.color = "red";
+                        msg.textContent = "Vui lòng nhập email trước khi đăng ký.";
+                        msg.style.display = "block";
+                    } else {
+                        msg.style.color = "green";
+                        msg.textContent = "Đã gửi thông tin đến email của bạn, vui lòng kiểm tra.";
+                        msg.style.display = "block";
+                        document.getElementById("emailInput").value = "";
+
+                        // Tự động ẩn sau 5 giây
+                        setTimeout(() => {
+                            msg.style.display = "none";
+                        }, 5000);
+                    }
+                });
+            </script>
+
+            <!-- Nội dung chính -->
+            <div class="footer-main">
+                <div class="col">
+                    <h3>CÔNG TY TNHH NHTStore VIỆT NAM</h3>
+                    <ul>
+                        <li><i class="fa fa-map-marker"></i> Địa chỉ: khu đấu giá tái định Kiến Hưng, Hà Đông, Hà Nội</li>
+                        <li><i class="fa fa-phone"></i> Hotline/Zalo: 0383167565</li>
+                        <li><i class="fa fa-envelope"></i> Email: hieudinhvan464@gmail.com</li>
+                    </ul>
+                    <div class="socials">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-tiktok"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3>VỀ NHT Store</h3>
+                    <ul>
+                        <li>› Giới thiệu công ty</li>
+                        <li>› Liên hệ, góp ý</li>
+                        <li>› Chứng nhận phân phối</li>
+                        <li>› Tin tức</li>
+                        <li>› Tin khuyến mại</li>
+                        <li>› Tin công nghệ</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>CHÍNH SÁCH - HỖ TRỢ</h3>
+                    <ul>
+                        <li>› Điều khoản sử dụng</li>
+                        <li>› Hướng dẫn mua hàng</li>
+                        <li>› Chính sách thanh toán</li>
+                        <li>› Chính sách bảo mật</li>
+                        <li>› Chính sách giao hàng</li>
+                        <li>› Chính sách đổi trả</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>FAN FACEBOOK</h3>
+                    <div class="fanpage">
+                        <!-- Nhúng Fanpage -->
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Meta&tabs&width=300&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" width="300" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById("searchBtn").addEventListener("click", searchProduct);
+
+            // Khi nhấn Enter cũng tìm kiếm
+            document.getElementById("searchInput").addEventListener("keypress", function(e){
+              if(e.key === "Enter"){
+                searchProduct();
+              }
+            });
+
+            function searchProduct(){
+              let keyword = document.getElementById("searchInput").value.toLowerCase();
+              let products = document.querySelectorAll(".product-card");
+              let found = false;
+
+              products.forEach(p => {
+                let name = p.querySelector("h3").textContent.toLowerCase();
+                if(name.includes(keyword)){
+                  p.style.display = "block";
+                  found = true;
+                } else {
+                  p.style.display = "none";
+                }
+              });
+
+              // Nếu không tìm thấy sản phẩm nào
+              let msg = document.getElementById("not-found");
+              if(!found){
+                if(!msg){
+                  msg = document.createElement("p");
+                  msg.id = "not-found";
+                  msg.textContent = "Không tìm thấy sản phẩm nào.";
+                  msg.style.color = "red";
+                  msg.style.marginTop = "20px";
+                  document.querySelector(".product-grid").appendChild(msg);
+                }
+              } else {
+                if(msg) msg.remove();
+              }
+            }
+        </script>
+
+</body>
+</html>
+

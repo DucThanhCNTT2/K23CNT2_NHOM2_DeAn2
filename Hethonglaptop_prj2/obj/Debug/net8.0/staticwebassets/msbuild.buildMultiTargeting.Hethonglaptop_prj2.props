@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Hethonglaptop_prj2.props" />
+</Project>
