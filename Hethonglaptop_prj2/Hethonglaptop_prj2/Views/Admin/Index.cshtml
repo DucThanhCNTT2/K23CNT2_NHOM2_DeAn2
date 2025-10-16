@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Admin Panel";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <!-- Sidebar -->
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark text-white min-vh-100">
+            <div class="d-flex flex-column align-items-sm-start px-3 pt-2 text-white">
+                <a href="/" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                    <span class="fs-4 fw-bold">⚙ Admin Panel</span>
+                </a>
+                <hr class="w-100 border-secondary" />
+
+                <ul class="nav nav-pills flex-column mb-auto w-100">
+                    <li class="nav-item">
+                        <a href="#" id="btnQuanLySanPham" class="nav-link text-white">
+                            <i class="fa fa-desktop me-2"></i> Quản lý sản phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnQuanLyDonHang" class="nav-link text-white">
+                            <i class="fa fa-shopping-cart me-2"></i> Quản lý đơn hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnQuanLyKhachHang" class="nav-link text-white">
+                            <i class="fa fa-user me-2"></i> Quản lý khách hàng
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnQuanLyNhanVien" class="nav-link text-white">
+                            <i class="fa fa-users me-2"></i> Quản lý nhân viên
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="btnQuanLyAccount" class="nav-link text-white">
+                            <i class="fa fa-user-shield me-2"></i> Quản lý tài khoản
+                        </a>
+                    </li>
+                </ul>
+
+                <hr class="w-100 border-secondary" />
+                <a asp-controller="Accounts" asp-action="Logout" class="text-white text-decoration-none mb-3">
+                    <i class="fa fa-sign-out-alt me-2"></i> Đăng xuất
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col py-3 bg-light" style="height: 100vh; overflow-y: auto;">
+            <h2 id="pageTitle" class="fw-bold mb-4">Trang quản trị</h2>
+            <div id="content-area">
+                <!-- AJAX load nội dung ở đây -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Load mặc định
+            $("#content-area").load("/Admin/DanhSachSanPham");
+            $("#pageTitle").text("Danh sách sản phẩm");
+
+            function loadContent(title, url) {
+                $("#pageTitle").text(title);
+                $("#content-area").load(url);
+            }
+
+            $("#btnQuanLySanPham").click(function (e) {
+                e.preventDefault();
+                loadContent("Danh sách sản phẩm", "/Admin/DanhSachSanPham");
+            });
+
+            $("#btnQuanLyDonHang").click(function (e) {
+                e.preventDefault();
+                loadContent("Danh sách đơn hàng", "/Admin/DanhSachDonHang");
+            });
+
+            $("#btnQuanLyKhachHang").click(function (e) {
+                e.preventDefault();
+                loadContent("Danh sách khách hàng", "/Admin/DanhSachKhachHang");
+            });
+
+            $("#btnQuanLyNhanVien").click(function (e) {
+                e.preventDefault();
+                loadContent("Danh sách nhân viên", "/Admin/DanhSachNhanVien");
+            });
+
+            $("#btnQuanLyAccount").click(function (e) {
+                e.preventDefault();
+                loadContent("Danh sách tài khoản", "/Admin/DanhSachAccount");
+            });
+        });
+    </script>
+
+    <style>
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #0d6efd !important;
+            color: #fff !important;
+            border-radius: 5px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+}

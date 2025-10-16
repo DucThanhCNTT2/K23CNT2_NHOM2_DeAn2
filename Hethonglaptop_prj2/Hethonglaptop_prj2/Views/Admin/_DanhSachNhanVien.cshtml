@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Hethonglaptop_prj2.Models.NhanVien>
+
+<div class="mb-3">
+    <a class="btn btn-success" asp-area="" asp-controller="NhanViens" asp-action="Create">
+        <i class="fas fa-plus"></i> Thêm nhân viên
+    </a>
+</div>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã NV</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Chức vụ</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var nv in Model)
+        {
+            <tr>
+                <td>@nv.MaNv</td>
+                <td>@nv.HoTen</td>
+                <td>@nv.Email</td>
+                <td>@nv.ChucVu</td>
+                <td style="width:160px;" class="text-center align-middle">
+                    <div class="d-flex justify-content-center gap-2">
+                        <a class="btn btn-primary" asp-area="" asp-controller="NhanViens" asp-action="Details" asp-route-id="@nv.MaNv">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        <a class="btn btn-warning" asp-area="" asp-controller="NhanViens" asp-action="Edit" asp-route-id="@nv.MaNv">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-danger" asp-area="" asp-controller="NhanViens" asp-action="Delete" asp-route-id="@nv.MaNv">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

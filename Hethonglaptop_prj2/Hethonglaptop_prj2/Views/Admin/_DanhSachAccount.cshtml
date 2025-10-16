@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Hethonglaptop_prj2.Models.Account>
+
+<div class="mb-3">
+    <a class="btn btn-success" asp-area="" asp-controller="Accounts" asp-action="Create">
+        <i class="fas fa-plus"></i> Thêm tài khoản
+    </a>
+</div>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acc in Model)
+        {
+            <tr>
+                <td>@acc.AccountId</td>
+                <td>@acc.UserName</td>
+                <td>@acc.Email</td>
+                <td>@acc.Role</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-controller="Accounts" asp-action="Edit" asp-route-id="@acc.AccountId">Sửa</a>
+                    <a class="btn btn-sm btn-danger" asp-controller="Accounts" asp-action="Delete" asp-route-id="@acc.AccountId">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
